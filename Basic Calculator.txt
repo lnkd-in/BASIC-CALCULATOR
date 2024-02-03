@@ -1,0 +1,53 @@
+package Calculator;
+
+import java.util.Scanner;
+
+public class BasicCalculator {
+public static void main(String[] args) {
+	Scanner scanner=new Scanner(System.in);
+	System.out.println("Simple Calculator....!");
+	System.out.println("Choose the Operation---->");
+	System.out.println("Enter your Choice from 1 to 4: ");
+	int choice=scanner.nextInt();
+	System.out.println("1.Addition");
+	System.out.println("2.Subtraction");
+	System.out.println("3.Multiplication");
+	System.out.println("4.Division");
+	System.out.println("Enter first number: ");
+	double n1=scanner.nextDouble();
+	System.out.println("Enter second number: ");
+	double n2=scanner.nextDouble();
+	double res=0;
+	switch(choice)
+	{
+	case 1:
+		   res=n1+n2;
+		   System.out.println(res);
+		   break;
+	case 2:
+		   res=n1-n2;
+		   System.out.println(res);
+		   break;
+	case 3:
+		   res=n1*n2;
+		   System.out.println(res);
+		   break;
+	case 4:
+		   if(n2!=0)
+		   {
+			   res=n1/n2;
+		   }
+		   else
+		   {
+			   System.out.println("Error:Cannot divide by zero");
+			   return;
+		   }
+		   break;
+	default:
+		   System.out.println("Invalid Choice...please choose a number between 1 to 4");
+		   return;
+			     
+	}
+	System.out.println("Result: "+res);
+ }
+}
